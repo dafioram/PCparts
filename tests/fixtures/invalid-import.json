@@ -1,0 +1,9 @@
+{
+  "app": "pc-inventory",
+  "schemaVersion": 1,
+  "machines": [
+    { "id": "bad-machine", "type": "not-a-real-type" }
+  ],
+  "boxes": [],
+  "parts": []
+}

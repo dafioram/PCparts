@@ -1,0 +1,51 @@
+{
+  "app": "pc-inventory",
+  "schemaVersion": 1,
+  "exportedAt": "2026-01-01T00:00:00.000Z",
+  "machines": [
+    {
+      "id": "fixture-machine-1",
+      "type": "desktop",
+      "nickname": "Imported Rig",
+      "modelName": "",
+      "purpose": "",
+      "status": "active",
+      "tags": ["imported"],
+      "notNeeded": [],
+      "slots": [],
+      "specs": "",
+      "serial": "",
+      "link": "",
+      "notes": "",
+      "retired": null,
+      "createdAt": "2026-01-01T00:00:00.000Z",
+      "updatedAt": "2026-01-01T00:00:00.000Z"
+    }
+  ],
+  "boxes": [
+    { "id": "unused", "name": "Unused", "isDefault": true, "notes": "", "tags": [] },
+    { "id": "fixture-box-1", "name": "Imported Box", "isDefault": false, "notes": "", "tags": [] }
+  ],
+  "parts": [
+    {
+      "id": "fixture-part-1",
+      "category": "cpu",
+      "label": "Imported CPU",
+      "quantity": 1,
+      "brand": "",
+      "model": "",
+      "serial": "",
+      "details": {},
+      "link": "",
+      "tags": [],
+      "notes": "",
+      "location": { "kind": "box", "id": "fixture-box-1" },
+      "retired": null,
+      "history": [],
+      "createdAt": "2026-01-01T00:00:00.000Z",
+      "updatedAt": "2026-01-01T00:00:00.000Z"
+    }
+  ],
+  "retirementGroups": [],
+  "meta": { "lastExportedAt": null }
+}

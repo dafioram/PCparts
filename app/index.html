@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>PC Inventory</title>
+<meta name="description" content="Track computers, parts and where everything lives.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22><rect x=%223%22 y=%224%22 width=%2218%22 height=%2212%22 rx=%222%22 fill=%22%236366f1%22/><rect x=%228%22 y=%2219%22 width=%228%22 height=%222%22 rx=%221%22 fill=%22%236366f1%22/></svg>">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="icon-sprite-mount" hidden aria-hidden="true"></div>
+
+<div class="app-shell">
+  <header class="topbar">
+    <a class="brand" href="#/machines">
+      <svg class="icon" width="22" height="22"><use href="#icon-desktop"></use></svg>
+      <span>PC Inventory</span>
+    </a>
+    <div class="topbar-search">
+      <svg class="icon" width="16" height="16" aria-hidden="true"><use href="#icon-search"></use></svg>
+      <input id="global-search" type="search" placeholder="Search everything…" aria-label="Search" autocomplete="off">
+    </div>
+    <button id="undo-btn" class="undo-btn" type="button" hidden>
+      <svg class="icon" width="16" height="16" aria-hidden="true"><use href="#icon-undo"></use></svg>
+      <span>Undo</span>
+    </button>
+  </header>
+
+  <nav class="sidenav" aria-label="Main">
+    <a href="#/machines" data-route="machines"><svg class="icon"><use href="#icon-desktop"></use></svg><span>Machines</span></a>
+    <a href="#/boxes" data-route="boxes"><svg class="icon"><use href="#icon-box"></use></svg><span>Boxes</span></a>
+    <a href="#/parts" data-route="parts"><svg class="icon"><use href="#icon-parts"></use></svg><span>All Parts</span></a>
+    <a href="#/graveyard" data-route="graveyard"><svg class="icon"><use href="#icon-graveyard"></use></svg><span>Graveyard</span></a>
+    <a href="#/data" data-route="data"><svg class="icon"><use href="#icon-data"></use></svg><span>Data</span></a>
+  </nav>
+
+  <main class="view">
+    <div id="banners" class="banners"></div>
+    <div id="view" tabindex="-1"></div>
+  </main>
+
+  <nav class="bottomnav" aria-label="Main">
+    <a href="#/machines" data-route="machines"><svg class="icon"><use href="#icon-desktop"></use></svg><span>Machines</span></a>
+    <a href="#/boxes" data-route="boxes"><svg class="icon"><use href="#icon-box"></use></svg><span>Boxes</span></a>
+    <a href="#/parts" data-route="parts"><svg class="icon"><use href="#icon-parts"></use></svg><span>Parts</span></a>
+    <a href="#/graveyard" data-route="graveyard"><svg class="icon"><use href="#icon-graveyard"></use></svg><span>Graveyard</span></a>
+    <a href="#/data" data-route="data"><svg class="icon"><use href="#icon-data"></use></svg><span>Data</span></a>
+  </nav>
+</div>
+
+<div id="modal-root"></div>
+<div id="toast-root" class="toast-root" aria-live="polite"></div>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
