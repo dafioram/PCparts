@@ -7,7 +7,7 @@ A fully static web app for tracking computers and the parts inside them: which m
 ## 1. Goals and constraints
 
 - **Fully static.** Plain HTML, CSS and JavaScript (ES modules), no build step, no server, no runtime dependencies. The app folder can be served as-is by GitHub Pages or any static host.
-- **No network requests at runtime.** No CDNs, web fonts, analytics or APIs. Icons are bundled SVGs; fonts use the system font stack. The app works fully offline once loaded.
+- **No network requests at runtime.** No CDNs, web fonts, analytics or APIs. Icons are bundled SVGs; fonts use the system font stack. A service worker (`app/sw.js`) caches the app shell, so the app works fully offline after the first visit.
 - **Browser storage** holds the working copy of the data.
 - **JSON import/export** of *all* data is the backup and the way to move between devices.
 - **Loose part descriptions.** "16GB DDR4" is a complete, valid part. Detail is optional and can be added later.

@@ -269,3 +269,10 @@ async function bootstrap() {
 }
 
 bootstrap();
+
+// Cache the app shell so it keeps working offline after the first visit.
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('sw.js').catch(() => {});
+  });
+}
