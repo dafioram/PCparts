@@ -54,7 +54,11 @@ test.describe('offline fallback', () => {
   test.beforeEach(async () => { site = await startSite(); });
   test.afterEach(async () => { await site.stop().catch(() => {}); });
 
-  test('browser offline: loads from cache', async ({ page, context }) => {
+  test('browser offline: loads from cache', async ({ page, context, browserName }) => {
+    // Playwright's WebKit throws "internal error" on any navigation while
+    // setOffline(true) is active, before the service worker can answer. The
+    // refused and hanging cases below cover the same fallback in WebKit.
+    test.skip(browserName === 'webkit', 'setOffline navigations are unsupported in Playwright WebKit');
     await visitAndCache(page, site.url);
     await context.setOffline(true);
     await page.reload();
